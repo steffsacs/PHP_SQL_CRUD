@@ -11,6 +11,8 @@
     -->
     <!--Bootstap 4 -->
     <link rel="stylesheet" href="https://bootswatch.com/4/yeti/bootstrap.min.css">
+    <!-- Font awesome for icons -->
+    <script src="https://kit.fontawesome.com/19fa685dc2.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <nav class= "navbar navbar-dark bg-dark ">

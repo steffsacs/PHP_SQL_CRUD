@@ -35,6 +35,43 @@ echo "Hello world"
 
         </div>
         <div class="col-md-8">
+            <table class= "table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Creation Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    $query= "SELECT * from tasks";
+                    $result_tasks=mysqli_query($conn, $query);
+
+                    while ($row= mysqli_fetch_array($result_tasks)) { ?>
+                        <tr>
+                            <td><?php echo $row["title"]?></td>
+                            <td><?php echo $row["description"]?></td>
+                            <td><?php echo $row["creationDate"]?></td>
+                            <td>
+                                <a href="update.php?id=<?php echo $row["id"]?> " 
+                                class= "btn btn-secondary"> 
+                                    <i class= "fas fa-marker"></i>
+                                </a>
+                                <a href="delete.php?id=<?php echo $row["id"]?> "
+                                class= "btn btn-danger"> 
+                                    <i class= "fas fa-trash-alt"></i>
+                                </a>
+
+                            </td>
+                        </tr>
+
+                    <?php   }?>
+
+                </tbody>
+
+            </table>
 
         </div>
     </div>
