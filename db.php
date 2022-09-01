@@ -1,4 +1,9 @@
 <?php
+
+/*Save data in this session*/
+session_start();
+
+
 $conn= mysqli_connect(
     'localhost',
     'root',
